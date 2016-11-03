@@ -450,9 +450,8 @@ void ResourceObject::load() {
 
 	multiPageLoader.cookieJar->clearExtraCookies();
 	typedef QPair<QString, QString> SSP;
- 	foreach (const SSP & pair, settings.cookies) {
+ 	foreach (const SSP & pair, settings.cookies)
 		multiPageLoader.cookieJar->useCookie(url, pair.first, pair.second);
-	}
 
 	QNetworkRequest r = QNetworkRequest(url);
 	typedef QPair<QString, QString> HT;
