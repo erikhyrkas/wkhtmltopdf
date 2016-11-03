@@ -113,6 +113,7 @@ private:
 	QList<QNetworkCookie> extraCookies;
 public:
 	void useCookie(const QUrl & url, const QString & name, const QString & value);
+	void clearExtraCookies();
 	QList<QNetworkCookie> cookiesForUrl(const QUrl & url) const;
 	void loadFromFile(const QString & path);
 	void saveToFile(const QString & path);
